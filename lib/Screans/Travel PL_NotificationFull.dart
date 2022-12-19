@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:travel_plane/utils/TravelPlane%20Constant.dart';
 import 'package:travel_plane/utils/TravelPlane%20Widget.dart';
-
 import '../utils/TravelPlane Colors.dart';
 import '../utils/TravelPlane Images.dart';
 import '../utils/TravelPlane Strings.dart';
