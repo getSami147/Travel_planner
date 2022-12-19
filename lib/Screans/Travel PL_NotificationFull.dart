@@ -74,7 +74,7 @@ class NotificationFull extends StatelessWidget {
             ).paddingTop(spacing_standard_new),
             Divider(
               color: grey.withOpacity(.09),
-              thickness: 17,
+              thickness: 1,
             ).paddingTop(spacing_middle),
             text(Notifications_Yesterday, fontWeight: FontWeight.w600)
                 .paddingTop(spacing_middle),

@@ -188,11 +188,6 @@ class _CustomizePlaneState extends State<CustomizePlane>
                   ? CheckOut().launch(context)
                   : _pageController.nextPage(
                       duration: _kDuration, curve: _kCurve);
-              // Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //       builder: (context) => CheckOut(),
-              //     ));
             });
           }, borderRadius: 10, backgroundColor: TravelPlane_AppBarColor)
               .paddingOnly(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:travel_plane/Screans/Travel%20Pl_AboutUs.dart';
 
 import '../utils/TravelPlane Colors.dart';
 import '../utils/TravelPlane Constant.dart';
@@ -88,7 +89,13 @@ class DrawerPage extends StatelessWidget {
                   ),
                   Build_DrawerList(
                     Title: Drawer_About,
-                    OnPressed: () {},
+                    OnPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AboutUs(),
+                          ));
+                    },
                   ),
                   Build_DrawerList(
                     Title: Drawer_SignOut,
