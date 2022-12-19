@@ -23,6 +23,7 @@ import 'Travel PL_Customize15th.dart';
 import 'Travel PL_Customize16th.dart';
 import 'Travel PL_Customize9th.dart';
 
+////
 class CustomizePlane extends StatefulWidget {
   const CustomizePlane({super.key});
 
@@ -33,18 +34,25 @@ class CustomizePlane extends StatefulWidget {
 class _CustomizePlaneState extends State<CustomizePlane>
     with SingleTickerProviderStateMixin {
   var initialValue = 0;
-  late PageController _controller;
+  PageController _pageController = PageController();
+  List<Widget> pages = [];
+  final _kDuration = Duration(milliseconds: 300);
+  final _kCurve = Curves.ease;
 
   @override
   void initState() {
-    _controller = PageController();
+    _pageController.addListener(() {
+      setState(() {
+        initialValue = _pageController.page!.toInt();
+      });
+    });
 
     super.initState();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _pageController.dispose();
 
     super.dispose();
   }
@@ -105,7 +113,7 @@ class _CustomizePlaneState extends State<CustomizePlane>
                                   color: TravelPlane_blackColor),
                               text: CustomizePlane_Question,
                               children: [
-                            TextSpan(text: CustomizePlane_Question_No),
+                            TextSpan(text: initialValue.toString()),
                             TextSpan(text: CustomizePlane_Total_Question),
                           ])).paddingOnly(top: 25, left: 10, right: 10),
                       Row(
@@ -130,12 +138,7 @@ class _CustomizePlaneState extends State<CustomizePlane>
                           right: spacing_middle),
                       Expanded(
                         child: PageView(
-                          controller: _controller,
-                          onPageChanged: (value) {
-                            setState(() {
-                              initialValue = value;
-                            });
-                          },
+                          controller: _pageController,
                           scrollDirection: Axis.horizontal,
                           children: [
                             CustomizeFrist(),
@@ -181,6 +184,10 @@ class _CustomizePlaneState extends State<CustomizePlane>
                   height: 60,
                   width: double.infinity, Onpressed: () {
             setState(() {
+              initialValue == 15
+                  ? CheckOut().launch(context)
+                  : _pageController.nextPage(
+                      duration: _kDuration, curve: _kCurve);
               // Navigator.push(
               //     context,
               //     MaterialPageRoute(

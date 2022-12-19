@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:travel_plane/Screans/Travel%20PL_SearchPage.dart';
 import 'package:travel_plane/Screans/Travel%20PL_Explore%20Page.dart';
 import 'package:travel_plane/Screans/Travel%20PL_Home%20Page.dart';
 import 'package:travel_plane/Screans/Travel%20PL_Order%20Page.dart';
 import 'package:travel_plane/Screans/Travel%20PL_Profile%20Page.dart';
-import 'package:travel_plane/Screans/Travel%20PL_Search%20Page.dart';
 import 'package:travel_plane/utils/TravelPlane%20Colors.dart';
 import 'package:travel_plane/utils/TravelPlane%20Images.dart';
 import 'package:travel_plane/utils/TravelPlane%20Widget.dart';
@@ -22,9 +22,9 @@ class _DashboardState extends State<Dashboard> {
   List Pages = [
     ExplorePage(),
     HomePage(),
-    Search(),
+    SearchPage(),
     OrdersPage(),
-    ProfilePage()
+    ProfilePage(),
   ];
   // List of SVG images for Icons ...........................................>>>
   List<String> navbarIconsSvgs = [
@@ -83,9 +83,7 @@ class _DashboardState extends State<Dashboard> {
                       ),
                       onPressed: () {
                         selectedIndex = i;
-                        selectedIndex == 2
-                            ? showSearch(context: context, delegate: Search())
-                            : null;
+
                         setState(() {});
                       },
                     ),

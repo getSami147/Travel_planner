@@ -41,6 +41,8 @@ class _Sub_TourPlaneState extends State<Sub_TourPlane> {
         // Body Start .........................................................>>>
 
         body: SlidingUpPanel(
+          isDraggable: false,
+          minHeight: MediaQuery.of(context).size.height * .6,
           borderRadius: BorderRadius.circular(30),
           maxHeight: MediaQuery.of(context).size.height * .6,
           panel: Column(

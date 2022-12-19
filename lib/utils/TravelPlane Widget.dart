@@ -181,26 +181,25 @@ BoxDecoration boxDecoration(
 
 // Text TextFrom Feild FilledColor...........................................>>>
 class textformfield extends StatelessWidget {
-  // var borderSide;
-  // var isPassword;
-  // var isSecure;
-  // var fontSize;
-  // var textColor;
-  // // var fontFamily;
-  // var text;
-  // var maxLine;
-  // var keyboardType;
+  var borderSide;
+  var isPassword;
+  var isSecure;
+  var fontSize;
+  var textColor;
+  // var fontFamily;
+  var text;
+  var maxLine;
+  var keyboardType;
   textformfield({
     Key? key,
-    // var this.borderSide,
-    // var this.fontFamily,
-    // var this.fontSize = textSizeMedium,
-    // var this.isPassword = false,
-    // var this.isSecure = false,
-    // var this.keyboardType,
-    // var this.maxLine = 1,
-    // var this.text,
-    // var this.textColor = textColorSecondary,
+    var this.borderSide,
+    var this.fontSize = textSizeMedium,
+    var this.isPassword = false,
+    var this.isSecure = false,
+    var this.keyboardType,
+    var this.maxLine = 1,
+    var this.text,
+    var this.textColor = textColorSecondary,
   }) : super(key: key);
 
   @override
@@ -222,7 +221,7 @@ class textformfield extends StatelessWidget {
         ).paddingRight(10),
         suffixIconConstraints: BoxConstraints(maxHeight: 50, maxWidth: 50),
         filled: true,
-        fillColor: TravelPlane_whiteColor,
+        fillColor: TravelPlane_AppBarColor,
         border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(10)),
